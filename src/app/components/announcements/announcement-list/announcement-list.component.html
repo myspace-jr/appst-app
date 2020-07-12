@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="announcement-list">
+    <h4>HOME / ANNOUNCEMENTS</h4>
+    <h1>Announcements</h1>
+    <ng-container *ngIf="announcements; else loading">
+      <app-announcement-list-item *ngFor="let announcement of announcements; let i = index"
+        [announcement]="announcement" (click)="selectAnnouncement(announcement._id)">
+      </app-announcement-list-item>
+    </ng-container>
+    <ng-template #loading>
+      <mat-spinner color="accent" class="loading"></mat-spinner>
+    </ng-template>
+  </div>
+</div>

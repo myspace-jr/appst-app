@@ -1,0 +1,60 @@
+.header {
+  background-color: white;
+  border-bottom: 1px solid #DBDBDB;
+  padding-right: 0;
+  // position: fixed;
+  z-index: 2;
+
+  img.logo {
+    width: 170px;
+  }
+
+  button.menu_toggle {
+    margin-left: 50px;
+  }
+
+  .user {
+    font-size: small;
+    line-height: normal !important;
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    height: auto;
+    width: auto;
+
+    .inside-button {
+      display: flex;
+      justify-content: space-between;
+
+      .left {
+        .mat-icon {
+          font-size: 40px;
+          margin-right: 20px;
+        }
+      }
+
+      .top {
+        justify-content: space-between;
+        display: flex;
+
+        .name {
+          align-self: center;
+        }
+      }
+
+      .bottom {
+        font-size: smaller;
+      }
+    }
+  }
+
+  .push-right {
+    margin-left: auto;
+  }
+
+  .header-seperator {
+    height: 100%;
+    width: 1px;
+    background-color: #DBDBDB;
+  }
+}

@@ -1,0 +1,13 @@
+.navigation {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: #ffffff;
+  .sidebarContainer {
+    flex: 1;
+    overflow: hidden;
+    .mat-drawer-container{
+      background-color: white;
+    }
+  }
+}

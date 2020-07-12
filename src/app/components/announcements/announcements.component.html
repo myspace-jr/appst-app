@@ -1,0 +1,10 @@
+<div id="announcements">
+  <app-announcement-list [announcements]="announcements" (selectAnnouncementEvent)="fetchAnnouncement($event)">
+  </app-announcement-list>
+  <app-announcement [announcement]="selectedAnnouncement"></app-announcement>
+  <div id="addAnnouncement">
+    <button mat-fab color="primary" isIconButton="true">
+      <mat-icon>add</mat-icon>
+    </button>
+  </div>
+</div>

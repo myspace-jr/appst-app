@@ -1,0 +1,15 @@
+<mat-card class="card" [class.selected]="selected">
+  <div class="line yellow"></div>
+
+  <mat-card-title>{{announcement.role}}</mat-card-title>
+  <mat-card-subtitle>{{announcement.date | timeAgo}} by {{announcement.author}}</mat-card-subtitle>
+  <mat-card-content>
+    <h3>{{announcement.title}}</h3>
+    <p>
+      {{selected ? announcement.text : announcement.text | announcementText}}
+    </p>
+    <button mat-icon-button class="delete" *ngIf="selected" (click)="deleteAnnouncement(announcement._id)">
+      <mat-icon>delete</mat-icon>
+    </button>
+  </mat-card-content>
+</mat-card>

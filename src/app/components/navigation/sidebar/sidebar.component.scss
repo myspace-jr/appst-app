@@ -1,0 +1,42 @@
+mat-sidenav {
+  width: 280px;
+  height: 100%;
+  background-color: #0c1f47;
+  color: #ffffff !important;
+
+  .mat-list-item {
+    color: white;
+
+    mat-icon {
+      margin-right: 20px;
+    }
+  }
+
+  .mat-list-item.active {
+    background-color: #0d1736;
+  }
+
+  .watermark {
+    border-top: 1px solid #0d1736;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    padding-top: 20px;
+
+    img {
+      width: 50px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: small;
+      color: #dfdfdf;
+    }
+  }
+}
+
+.sidenav-container {
+  height: 100%;
+  background-color: #ffffff;
+}

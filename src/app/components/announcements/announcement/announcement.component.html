@@ -1,0 +1,15 @@
+<div id="announcement">
+  <div *ngIf="announcement; else notSelected">
+    <div class="item-container">
+      <app-announcement-list-item [selected]="true" (deleteAnnouncementEvent)="deleteAnnouncement($event)"
+        [announcement]="announcement" style="width:100%">
+      </app-announcement-list-item>
+    </div>
+  </div>
+  <ng-template #notSelected>
+    <div class="not-selected">
+      <mat-icon class="announcement_icon">announcement</mat-icon>
+      <p>Select an announcement to read</p>
+    </div>
+  </ng-template>
+</div>

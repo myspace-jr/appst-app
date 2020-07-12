@@ -1,0 +1,21 @@
+#announcements {
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+
+  app-announcement-list,
+  app-announcement {
+    flex: 1;
+  }
+
+  app-announcement-list {
+    margin-right: 10px;
+  }
+
+  #addAnnouncement {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+  }
+
+}

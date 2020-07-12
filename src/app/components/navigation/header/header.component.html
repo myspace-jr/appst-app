@@ -1,0 +1,36 @@
+  <mat-toolbar class="header">
+    <img class="logo" src="assets/images/default-logo.png" alt="worksence_logo" />
+    <button class="menu_toggle" mat-icon-button (click)="toggleNav()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <button mat-button [matMenuTriggerFor]="user" class="user push-right">
+      <div class="inside-button">
+        <div class="left">
+          <mat-icon>account_circle</mat-icon>
+        </div>
+        <div class="right">
+          <div class="top">
+            <div class="name">
+              Tanju Serif
+            </div>
+            <mat-icon>arrow_drop_down</mat-icon>
+          </div>
+          <div class="bottom">
+            Admin
+          </div>
+        </div>
+      </div>
+    </button>
+    <mat-menu #user="matMenu">
+      <button mat-menu-item>
+        <mat-icon>settings</mat-icon> Account Settings
+      </button>
+      <button mat-menu-item>
+        <mat-icon>exit_to_app</mat-icon> Logout
+      </button>
+    </mat-menu>
+    <div class="header-seperator"></div>
+    <button class="tools" mat-button>
+      <mat-icon>construction</mat-icon>
+    </button>
+  </mat-toolbar>
