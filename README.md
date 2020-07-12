@@ -1,6 +1,6 @@
 # Appst
 
-1. Clone appst-server to your computer
+1. After cloning and running appst-server clone appst-app to your computer
 2. npm install
 3. npm start 
 
