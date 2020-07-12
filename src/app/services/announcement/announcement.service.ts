@@ -13,6 +13,7 @@ export class AnnouncementService {
 
   announcements: Array<Announcement>
   single_announcement: Announcement = null;
+
   constructor(private http: HttpClient, private _snackBar: MatSnackBar) {
   }
 
@@ -33,15 +34,23 @@ export class AnnouncementService {
     this.http.delete(this.url + 'api/announcements/' + id).subscribe((res: any) => {
       if (res.deleted) {
         this.fetchAnnouncements();
-        this._snackBar.open('Announcement Deleted', 'Dismiss', {
+        this._snackBar.open('Announcement Deleted!', 'Dismiss', {
           duration: 3000
         });
         this.single_announcement = null;
+
         return true;
       } else {
+        this._snackBar.open('An error occurred!', 'Dismiss', {
+          duration: 3000
+        });
         return false;
       }
     });
+  }
+
+  createAnnouncement(an: any) {
+    return this.http.post(this.url + 'api/announcements', an);
   }
 
 

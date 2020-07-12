@@ -8,12 +8,13 @@ import { Announcement } from '../../models/Announcement.model';
   styleUrls: ['./announcements.component.scss']
 })
 export class AnnouncementsComponent implements OnInit {
-
+  newAnnouncement: boolean;
   constructor(private announcementService: AnnouncementService) { }
   // announcements: Array<Announcement>;
   singleFetching: boolean = false;
 
   ngOnInit(): void {
+    this.newAnnouncement = false;
     this.announcementService.fetchAnnouncements();
   }
 

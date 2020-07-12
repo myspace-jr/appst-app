@@ -3,8 +3,9 @@
   </app-announcement-list>
   <app-announcement [announcement]="selectedAnnouncement"></app-announcement>
   <div id="addAnnouncement">
-    <button mat-fab color="primary" isIconButton="true">
+    <button mat-fab color="primary" isIconButton="true" (click)="newAnnouncement = true">
       <mat-icon>add</mat-icon>
     </button>
   </div>
+  <app-new-announcement *ngIf="newAnnouncement" (close)="newAnnouncement = false"></app-new-announcement>
 </div>

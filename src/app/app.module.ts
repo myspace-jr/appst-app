@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -18,6 +19,8 @@ import { AnnouncementListItemComponent } from './components/announcements/announ
 import { AnnouncementComponent } from './components/announcements/announcement/announcement.component';
 import { AnnouncementTextPipe } from './pipes/announcement-text/announcement-text.pipe';
 import { TimeAgoPipe } from './pipes/time-ago/time-ago.pipe';
+import { NewAnnouncementComponent } from './components/announcements/new-announcement/new-announcement.component';
+
 
 @NgModule({
   declarations: [
@@ -30,7 +33,8 @@ import { TimeAgoPipe } from './pipes/time-ago/time-ago.pipe';
     AnnouncementListItemComponent,
     AnnouncementComponent,
     AnnouncementTextPipe,
-    TimeAgoPipe
+    TimeAgoPipe,
+    NewAnnouncementComponent
   ],
   imports: [
     BrowserModule,
@@ -38,6 +42,7 @@ import { TimeAgoPipe } from './pipes/time-ago/time-ago.pipe';
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
+    ReactiveFormsModule
 
   ],
   providers: [],

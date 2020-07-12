@@ -5,19 +5,24 @@ body {
   height: 100%;
   width: 100%;
   background-color: #ffffff;
+
   // Webkit Scrollbar
   ::-webkit-scrollbar {
     width: 4px;
   }
+
   ::-webkit-scrollbar-track {
     background: #ffffff;
   }
+
   ::-webkit-scrollbar-thumb {
     background: #e0e0e0;
   }
+
   ::-webkit-scrollbar-thumb:hover {
     background: #888;
   }
+
   // Firefox Scrollbar
   scrollbar-width: thin;
   scrollbar-color: #f6f6f6 #ffffff;
@@ -53,4 +58,26 @@ body {
   width: 100%;
   overflow-y: scroll;
   overflow-x: hidden;
+}
+
+
+.line {
+  height: 80%;
+  width: 4px;
+  position: absolute;
+  left: -3px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.line.red {
+  background-color: #fc9797;
+}
+
+.line.yellow {
+  background-color: #ffcca5;
+}
+
+.line.green {
+  background-color: #bbe9b4;
 }

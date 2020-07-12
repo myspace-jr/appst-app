@@ -11,13 +11,20 @@ export class AnnouncementListItemComponent implements OnInit {
 
   @Input() announcement: Announcement;
   @Input() selected: boolean;
-
+  randomLine: string;
 
 
   constructor(private announcementService: AnnouncementService) { }
 
   ngOnInit(): void {
+    this.setRandomLine();
+    console.log(this.announcement.date);
+  }
 
+
+  setRandomLine() {
+    const arr = ['yellow', 'red', 'green'];
+    this.randomLine = arr[Math.floor(Math.random() * Math.floor(3))];
   }
 
   deleteAnnouncement(id: string) {

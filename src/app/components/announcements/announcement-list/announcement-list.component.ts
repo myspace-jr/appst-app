@@ -7,13 +7,14 @@ import { Announcement } from '../../../models/Announcement.model';
   styleUrls: ['./announcement-list.component.scss']
 })
 export class AnnouncementListComponent implements OnInit {
-  @Input() announcements : Array<Announcement>;
+  @Input() announcements: Array<Announcement>;
   @Output() selectAnnouncementEvent = new EventEmitter<number>();
   constructor() { }
 
   ngOnInit(): void {
   }
-  
+
+
   selectAnnouncement(i) {
     this.selectAnnouncementEvent.emit(i);
   }

@@ -1,0 +1,54 @@
+<div class="newAnnouncemnet closeAnn" (click)="newAnnouncementClicked($event)">
+  <div class="closeBtn closeAnn">
+    <button class="closeAnn" mat-icon-button>
+      <mat-icon class="closeAnn">
+        close
+      </mat-icon>
+    </button>
+  </div>
+  <mat-card class="card inner-box">
+    <div class="line" [ngClass]="randomLine"></div>
+    <mat-card-title style="margin-bottom:30px">New Announcement</mat-card-title>
+
+    <div class="example-container">
+      <form [formGroup]="announcementForm" (ngSubmit)="onFormSubmit()">
+
+        <mat-form-field appearance="fill" class="author">
+          <mat-label>Author</mat-label>
+          <input matInput formControlName="author">
+          <mat-icon matSuffix>face</mat-icon>
+
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>User Role</mat-label>
+          <mat-select formControlName="role">
+            <mat-option value="Employee">Employee</mat-option>
+            <mat-option value="Manager">Manager</mat-option>
+            <mat-option value="Ceo">CEO</mat-option>
+          </mat-select>
+          <mat-icon matSuffix>record_voice_over</mat-icon>
+
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill" class="title">
+          <mat-label>Title</mat-label>
+          <input matInput formControlName="title">
+          <mat-icon matSuffix>announcement</mat-icon>
+
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill" class="announcement-text">
+          <mat-label>Announcement</mat-label>
+          <textarea matInput rows="10" formControlName="text"></textarea>
+
+          <mat-hint>600 Characters Max</mat-hint>
+
+        </mat-form-field>
+        <button type=" submit" mat-raised-button color="primary">
+          Add Announcement
+        </button>
+      </form>
+    </div>
+  </mat-card>
+
+</div>

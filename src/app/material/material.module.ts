@@ -8,6 +8,10 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatCardModule } from '@angular/material/card';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSelectModule } from '@angular/material/select';
+
 
 
 const material = [
@@ -19,6 +23,9 @@ const material = [
   MatListModule,
   MatProgressSpinnerModule,
   MatCardModule,
+  MatFormFieldModule,
+  MatSelectModule,
+  MatInputModule,
   MatSnackBarModule
 ]
 
