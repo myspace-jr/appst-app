@@ -40,3 +40,13 @@ mat-sidenav {
   height: 100%;
   background-color: #ffffff;
 }
+
+
+@media (max-height:512px) {
+  mat-sidenav {
+    .watermark {
+      position: relative;
+    }
+  }
+
+}

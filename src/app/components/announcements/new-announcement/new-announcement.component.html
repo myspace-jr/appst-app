@@ -19,16 +19,6 @@
           <mat-icon matSuffix>face</mat-icon>
 
         </mat-form-field>
-        <mat-form-field appearance="fill">
-          <mat-label>User Role</mat-label>
-          <mat-select formControlName="role">
-            <mat-option value="Employee">Employee</mat-option>
-            <mat-option value="Manager">Manager</mat-option>
-            <mat-option value="Ceo">CEO</mat-option>
-          </mat-select>
-          <mat-icon matSuffix>record_voice_over</mat-icon>
-
-        </mat-form-field>
         <br>
         <mat-form-field appearance="fill" class="title">
           <mat-label>Title</mat-label>
@@ -41,7 +31,7 @@
           <mat-label>Announcement</mat-label>
           <textarea matInput rows="10" formControlName="text"></textarea>
 
-          <mat-hint>600 Characters Max</mat-hint>
+          <mat-hint>1500 Characters Max {{ charLimit }}</mat-hint>
 
         </mat-form-field>
         <button type=" submit" mat-raised-button color="primary">

@@ -1,5 +1,5 @@
 <mat-sidenav-container class="sidenav-container">
-  <mat-sidenav mode="side" [opened]="showSideNav" fixedTopGap="64" #sidenav>
+  <mat-sidenav [mode]="isMobile ? 'over' : 'side'" [opened]="showSideNav" fixedTopGap="64" #sidenav class="sidenavx">
     <mat-nav-list class="nav-list">
       <a mat-list-item routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
         <mat-icon>home</mat-icon> Home

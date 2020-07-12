@@ -1,0 +1,39 @@
+#rotate {
+  display: none;
+}
+
+@media only screen and (max-width:600px) and (orientation: portrait) {
+  #rotate {
+    display: flex !important;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #0c1f47d5;
+    z-index: 99999999;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+    justify-content: space-between;
+    padding: 40px 0;
+
+    .img_placeholder {
+      width: 100%;
+
+      img {
+        position: relative;
+        width: 80%;
+        height: auto;
+        object-fit: cover;
+
+      }
+
+      img.worksense {
+        width: 50%;
+      }
+    }
+
+
+  }
+}

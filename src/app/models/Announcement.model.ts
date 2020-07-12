@@ -4,6 +4,5 @@ export class Announcement {
     title: string;
     text: string;
     author: string;
-    role?: string;
     date?: string;
 }

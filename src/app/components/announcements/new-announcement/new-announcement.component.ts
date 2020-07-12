@@ -11,13 +11,12 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 })
 export class NewAnnouncementComponent implements OnInit {
   @Output() close = new EventEmitter<boolean>()
-
   announcementForm = new FormGroup({
     author: new FormControl('', Validators.required),
     role: new FormControl('', Validators.required),
     title: new FormControl('', Validators.required),
     text: new FormControl('', [Validators.required,
-    Validators.maxLength(600),])
+    Validators.maxLength(1500),])
   });
 
   constructor(private announcementService: AnnouncementService, private _snackBar: MatSnackBar) { }
@@ -26,7 +25,9 @@ export class NewAnnouncementComponent implements OnInit {
     this.setRandomLine();
   }
   onFormSubmit() {
-    this.announcementService.createAnnouncement(this.announcementForm.value).subscribe((res: any) => {
+    let tempAnn = { ...this.announcementForm.value }
+    tempAnn.date = new Date();
+    this.announcementService.createAnnouncement(tempAnn).subscribe((res: any) => {
       this._snackBar.open('Announcement Created!', 'Dismiss', {
         duration: 5000
       });
@@ -52,6 +53,10 @@ export class NewAnnouncementComponent implements OnInit {
       this.close.emit(true);
     }
     console.log(e);
+  }
+
+  get charLimit(): string {
+    return '(' + (1500 -this.announcementForm.value.text.length) + ')'
   }
 
 }

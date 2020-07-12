@@ -10,7 +10,12 @@ export class SidebarComponent implements OnInit {
   
   constructor() { }
 
+
   ngOnInit(): void {
+  }
+
+  get isMobile(){
+    return window.innerWidth <= 1024
   }
 
 }

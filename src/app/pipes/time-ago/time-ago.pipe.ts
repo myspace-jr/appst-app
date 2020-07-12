@@ -13,7 +13,7 @@ export class TimeAgoPipe implements PipeTransform {
     const hours = { value: Math.floor(minutes.value / 60), format: "hour" };
     const days = { value: Math.floor(hours.value / 24), format: "day" };
     const left = days.value > 0 ? days : hours.value > 0 ? hours : minutes
-    const string = left.value + ' ' + left.format + (left.value > 1 ? "s" : "") + " ago";
+    const string = left.value === 0 ? "just now" : (left.value + ' ' + left.format + (left.value > 1 ? "s" : "") + " ago");
 
     return string;
   }
